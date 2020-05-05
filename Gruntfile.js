@@ -68,6 +68,14 @@ module.exports = function (grunt) {
         ],
         dest: distDir
       },
+      fontawesomefonts: {
+        expand: true,
+        cwd: 'node_modules/@fortawesome/fontawesome-free',
+        src: [
+          './webfonts/**'
+        ],
+        dest: distDir+'/'
+      },
       favicon: {
         expand: true,
         cwd: srcDir,
