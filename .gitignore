@@ -1,0 +1,6 @@
+dev*
+build
+dist/
+node_modules/
+.tmp/
+*~

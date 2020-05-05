@@ -1,0 +1,48 @@
+<!-- dev --><!-- WILL BE INCLUDED FROM INSIDE HEAD ON --><!-- enddev -->
+<!-- dev --><meta charset="utf-8"><!-- enddev -->
+<!-- dev --><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- enddev -->
+<!-- dev --><script>auth={firstname:"Me",lastname:"Myself",uid:"and-I",logouturl:"."}</script><!-- enddev -->
+<!-- build:js js/vendor.js -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-route/angular-route.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- endbuild -->
+<!-- build:css css/vendor.css -->
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+<!-- endbuild -->
+<!-- mustache <link rel="stylesheet" href="css/fonts.css"> end mustache -->
+<!-- dev --><link rel="stylesheet" href="../dev/fonts.css"><!-- enddev -->
+<link rel="stylesheet" href="css/main.css">
+
+<script src="js/config.js"></script>
+<script src="js/root.app.js"></script>
+<script src="js/root.service.js"></script>
+<script src="js/root.controller.js"></script>
+
+<div data-ng-app="rootApp" data-ng-controller="rootController">
+
+<div class="container-fluid">
+
+  <layout-header></layout-header>
+  <layout-table></layout-table>
+
+  <div class="row">
+    <div class="col-4">
+      <small><small><span id="build" class="color2"></span></small></small>
+      <script>
+        document.getElementById("build").innerHTML = '<span title="versio #'+version+'">#'+version+'</span>';
+      </script>
+    </div>
+    <div class="col-4 text-center">
+      <div data-ng-if="!auth"><h1>Oops!</h1><p>That's not the way you want to go...</p></div>
+      <span>&copy; 2020 <a href="https://rapida.fi">Rapida</a></span>
+    </div>
+    <div class="col-4 text-right">
+    </div>
+  </div>
+
+</div>
+
+</div>

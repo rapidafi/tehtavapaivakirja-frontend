@@ -1,0 +1,27 @@
+{
+  "name": "tehtavapaivakirja-frontend",
+  "version": "0.0.1",
+  "description": "Tehtäväpäiväkirja",
+  "repository": "https://github.com/rapidafi/tehtavapaivakirja-frontend.git",
+  "author": "Rapida",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-usemin": "^3.1.1",
+    "load-grunt-tasks": "^5.1.0",
+    "time-grunt": "^2.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}

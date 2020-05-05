@@ -1,0 +1,64 @@
+body {
+  background-color: #FEFEFF;
+  color: #000000;
+  font-family: 'Poppins';
+  font-weight: 200; /* 'Extra-Light'; */
+}
+
+h1 {
+  font-weight: bold;
+}
+h2 {
+  font-weight: bold;
+}
+h3 {
+  font-weight: bold;
+}
+h4 {
+  font-weight: bold;
+}
+a {
+  color: #2699FF;
+  text-decoration: none;
+}
+
+.color0 {
+  color: #000000;
+}
+.bgcolor0 {
+  background-color: #000000;
+}
+.color1 {
+  color: #FFFFFF;
+}
+.bgcolor1 {
+  background-color: #FFFFFF;
+}
+.color2 {
+  color: #FEFEFF;
+}
+.bgcolor2 {
+  background-color: #FEFEFF;
+}
+.color3 {
+  color: #2699FF;
+}
+.bgcolor3 {
+  background-color: #2699FF;
+}
+.color4 {
+  color: #7171FF;
+}
+.bgcolor4 {
+  background-color: #7171FF;
+}
+.color5 {
+  color: #DEDEFF;
+}
+.bgcolor5 {
+  background-color: #DEDEFF;
+}
+
+.teh-studypath {
+  color: #2699FF;
+}

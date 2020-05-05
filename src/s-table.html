@@ -1,0 +1,52 @@
+<div class="teh-studypath">
+  <div class="row">
+    <div class="col-md-2 col-sm-1 d-none d-sm-block">
+    </div>
+    <div class="col-md-8 col-sm-10 col-12">
+      <h4 data-ng-bind="studypath.content.title[lang]">StudyPath.Title</h4>
+    </div>
+    <div class="col-md-8 col-sm-1 d-none d-sm-block">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-sm-1 d-none d-sm-block">
+    </div>
+    <div class="col-md-8 col-sm-10 col-12">
+      <div>
+        <p>StudyPath.Info</p>
+        <p>...with its own HTML content</p>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-1 d-none d-sm-block">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 col-sm-1 d-none d-sm-block">
+    </div>
+    <div class="col-md-8 col-sm-10 col-12">
+
+      <div data-ng-repeat="m in studypath.modules">
+        <div class="bgcolor3 color1" data-ng-click="moduleOpen['id'+m.id]=!moduleOpen['id'+m.id]">
+          <h4>
+            <i class="fas" data-ng-class="{'fa-arrow-down':!moduleOpen['id'+m.id], 'fa-arrow-up':moduleOpen['id'+m.id]}"></i>&nbsp;
+            <span data-ng-bind="m.content.title[lang]">Module (title)</span>
+          </h4>
+        </div>
+        <div data-ng-repeat="a in m.assignments" data-ng-show="moduleOpen['id'+m.id]">
+          <div data-ng-bind="a.content.title[lang]">Assignment</div>
+          <div>
+            <span data-ng-repeat="t in a.content.tasks">
+              <span data-ng-bind="t.title[lang]">...with its tasks</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-sm-1 d-none d-sm-block">
+    </div>
+  </div>
+
+</div><!-- /studypath -->
+
