@@ -1,4 +1,5 @@
 dev*
+api*
 build
 dist/
 node_modules/

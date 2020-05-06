@@ -11,11 +11,11 @@
  */
 let CONFIG = {};
 $.extend(true,CONFIG,{
-    studypathfullURI: '../dev/studypathfull.php/',//fix according to environment
-    studypathURI: '../dev/studypath.php/',//fix according to environment
-    moduleURI: '../dev/module.php/',//fix according to environment
-    assignmentURI: '../dev/assignment.php/',//fix according to environment
-    submissionURI: '../dev/submission.php/',//fix according to environment
+    studypathfullURI: '../api/studypathfull.php/',//fix according to environment
+    studypathURI: '../api/studypath.php/',//fix according to environment
+    moduleURI: '../api/module.php/',//fix according to environment
+    assignmentURI: '../api/assignment.php/',//fix according to environment
+    submissionURI: '../api/submission.php/',//fix according to environment
     /*->instance
     languages: {
         'fi':'Suomeksi',
