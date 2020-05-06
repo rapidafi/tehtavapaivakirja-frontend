@@ -32,29 +32,30 @@
             <i class="fas" data-ng-class="{'fa-arrow-down':!moduleOpen['id'+m.id], 'fa-arrow-up':moduleOpen['id'+m.id]}"></i>&nbsp;
             <span data-ng-bind="m.content.title[lang]">*Module (title)*</span>
           </h4>
-          <div data-ng-show="moduleOpen['id'+m.id]">
-            <form method="post" data-ng-controller="TinyMceController">
-              <textarea data-ui-tinymce="tinymceOptions" data-ng-model="tinymceModel"></textarea>
-              <button data-ng-click="getContent()">Get content</button>
-              <button data-ng-click="setContent()">Set content</button>
-            </form>
-          </div>
-          <div data-ng-show="moduleOpen['id'+m.id]">
-            <table>
-            <tr>
-              <td data-ng-repeat="a in m.assignments">
-                <span data-ng-bind="a.content.title[lang]">*Assignment (title)*</span>
-                <br>
-                <button class="btn btn-sm btn-primary teh-btn">*Muokkaa*</button>
-              </td>
-              <td>
-                <span></span>
-                <br>
-                <button class="btn btn-sm btn-primary teh-btn">*Lisää tehtävä*</button>
-              </td>
-            </tr>
-            </table>
-          </div>
+        </div>
+        <div data-ng-show="moduleOpen['id'+m.id]">
+          <form method="post" data-ng-controller="TinyMceController">
+            <textarea data-ui-tinymce="tinymceOptions" data-ng-model="tinymceModel"></textarea>
+            <button data-ng-click="getContent()">Get content</button>
+            <button data-ng-click="setContent()">Set content</button>
+          </form>
+        </div>
+        <div data-ng-show="moduleOpen['id'+m.id]">
+          <table>
+          <tr>
+            <td data-ng-repeat="a in m.assignments">
+              <span data-ng-bind="a.content.title[lang]">*Assignment (title)*</span>
+              <br>
+              <button class="btn btn-sm btn-primary teh-btn">*Muokkaa*</button>
+            </td>
+            <td>
+              <span></span>
+              <br>
+              <button class="btn btn-sm btn-primary teh-btn">*Lisää tehtävä*</button>
+            </td>
+          </tr>
+          </table>
+        </div>
         </div>
       </div>
     </div>
