@@ -1,6 +1,6 @@
 'use strict';
 
-let rootApp = angular.module('rootApp', []);
+let rootApp = angular.module('rootApp', ['ui.tinymce']);
 
 angular.module("rootApp").directive("layoutTable",function() {
   return({templateUrl: "s-table.html"});

@@ -149,6 +149,6 @@ function($scope,$http,$filter,$interval,$timeout,Data)
     $scope.getStudyPathFull();//initial (interval is delayed)
 
     // start loading data repeatedly
-    $scope.setUpdateInterval($scope.updateInterval);
+    //no updates! $scope.setUpdateInterval($scope.updateInterval);
   }
 }]);//-rootController

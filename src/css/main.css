@@ -62,3 +62,7 @@ a {
 .teh-studypath {
   color: #2699FF;
 }
+
+.teh-btn {
+  text-transform: uppercase;
+}
