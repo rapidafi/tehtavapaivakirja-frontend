@@ -64,6 +64,19 @@ $.extend(true,CONFIG,{
                     en:'Add students'
                 }
             }
+        },
+        module:{
+
+        },
+        assignment:{
+            edit:{
+                fi:'Muokkaa',
+                en:'Edit'
+            },
+            add:{
+                fi:'Lisää tehtävä',
+                en:'Add assignment'
+            }
         }
     }
 }

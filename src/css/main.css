@@ -1,5 +1,5 @@
 body {
-  background-color: #FEFEFF;
+  background-color: #FFFFFF;
   color: #000000;
   font-family: 'Poppins';
   font-weight: 200; /* 'Extra-Light'; */
@@ -35,10 +35,10 @@ a {
   background-color: #FFFFFF;
 }
 .color2 {
-  color: #FEFEFF;
+  color: #73BDFC;
 }
 .bgcolor2 {
-  background-color: #FEFEFF;
+  background-color: #73BDFC;
 }
 .color3 {
   color: #2699FF;

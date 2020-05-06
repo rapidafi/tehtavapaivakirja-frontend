@@ -28,14 +28,23 @@
 
       <div data-ng-repeat="m in studypath.modules">
         <div data-ng-click="moduleOpen['id'+m.id]=!moduleOpen['id'+m.id]">
-          <h4 class="bgcolor3 color1">
-            <i class="fas" data-ng-class="{'fa-arrow-down':!moduleOpen['id'+m.id], 'fa-arrow-up':moduleOpen['id'+m.id]}"></i>&nbsp;
+          <table class="table table-condensed bgcolor3 color1">
+          <tr>
+          <td>
+          <h4>
+            <i class="btn bgcolor2 color1 fas" data-ng-class="{'fa-arrow-down':!moduleOpen['id'+m.id], 'fa-arrow-up':moduleOpen['id'+m.id]}"></i>&nbsp;
             <span data-ng-bind="m.content.title[lang]">*Module (title)*</span>
           </h4>
+          </td>
+          <td align="right">
+            <i class="fas" data-ng-class="{'fa-check-circle':moduleChange['id'+m.id], 'fa-pen':!moduleChange['id'+m.id]}"></i>
+          </td>
+          </tr>
+          </table>
         </div>
         <div data-ng-show="moduleOpen['id'+m.id]">
           <form method="post" data-ng-controller="TinyMceController">
-            <textarea data-ui-tinymce="tinymceOptions" data-ng-model="tinymceModel"></textarea>
+            <textarea data-ui-tinymce="tinymceOptions" data-ng-model="tinymceModel" data-ng-change="moduleChange['id'+m.id]=true"></textarea>
             <button data-ng-click="getContent()">Get content</button>
             <button data-ng-click="setContent()">Set content</button>
           </form>
@@ -46,12 +55,12 @@
             <td data-ng-repeat="a in m.assignments">
               <span data-ng-bind="a.content.title[lang]">*Assignment (title)*</span>
               <br>
-              <button class="btn btn-sm btn-primary teh-btn">*Muokkaa*</button>
+              <button class="btn btn-sm btn-primary teh-btn" data-ng-bind="i18n.assignment.edit[lang]"></button>
             </td>
             <td>
               <span></span>
               <br>
-              <button class="btn btn-sm btn-primary teh-btn">*Lisää tehtävä*</button>
+              <button class="btn btn-sm btn-primary teh-btn" data-ng-bind="i18n.assignment.add[lang]"></button>
             </td>
           </tr>
           </table>

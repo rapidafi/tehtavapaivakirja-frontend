@@ -34,6 +34,10 @@ function($scope,$http,$filter,$interval,$timeout,Data)
         if (!$scope.moduleOpen.hasOwnProperty("id"+d.id)) {
           $scope.moduleOpen["id"+d.id] = false;
         }
+        if (!$scope.moduleChange.hasOwnProperty("id"+d.id)) {
+          $scope.moduleChange["id"+d.id] = false;
+        }
+
         $scope.debug>1 && console.debug('getStudyPathFull',d,di);
         if (d.id==1) {
           $scope.studypath = d;//linked to studypaths!
@@ -59,7 +63,8 @@ function($scope,$http,$filter,$interval,$timeout,Data)
   $scope.studypaths = [];
   $scope.studypath = {};
   $scope.moduleOpen = {}; // id#: true/false
-
+  $scope.moduleChange = {}; // id#: true/false
+  
   // hard reset from config (private)
   $scope.resetConfigValues = function() {
     $scope.debug && console.debug("resetConfigValues");
