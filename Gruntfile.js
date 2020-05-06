@@ -36,6 +36,48 @@ module.exports = function (grunt) {
       ]
     },
     copy: {
+      /*
+      favicon: {
+        expand: true,
+        cwd: srcDir,
+        src: [
+          './*.png'
+        ],
+        dest: distDir
+      }
+      */
+      fontawesomefonts: {
+        expand: true,
+        cwd: 'node_modules/@fortawesome/fontawesome-free',
+        src: [
+          './webfonts/**'
+        ],
+        dest: distDir+'/'
+      },
+      tinymcethemes: {
+        expand: true,
+        cwd: 'node_modules/tinymce',
+        src: [
+          './themes/silver/**'
+        ],
+        dest: distDir+'/js/'
+      },
+      tinymceskins: {
+        expand: true,
+        cwd: 'node_modules/tinymce',
+        src: [
+          './skins/**'
+        ],
+        dest: distDir+'/js/'
+      },
+      tinymcelangs: {
+        expand: true,
+        cwd: 'node_modules/tinymce-langs',
+        src: [
+          './langs/fi.js'
+        ],
+        dest: distDir+'/js/'
+      },
       html: {
         expand: true,
         cwd: srcDir,
@@ -65,22 +107,6 @@ module.exports = function (grunt) {
         cwd: srcDir,
         src: [
           'css/*.css'
-        ],
-        dest: distDir
-      },
-      fontawesomefonts: {
-        expand: true,
-        cwd: 'node_modules/@fortawesome/fontawesome-free',
-        src: [
-          './webfonts/**'
-        ],
-        dest: distDir+'/'
-      },
-      favicon: {
-        expand: true,
-        cwd: srcDir,
-        src: [
-          './*.png'
         ],
         dest: distDir
       }
